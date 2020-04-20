@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'output';
+  setValue = 19;
+  getVal: any;
+
+
+  reset() {
+    this.getVal = document.getElementById('reset');
+    this.setValue = this.getVal.value;
+    console.log(this.setValue);
+    this.setValue = 20;
+    console.log(this.setValue);
+  }
+
 }
